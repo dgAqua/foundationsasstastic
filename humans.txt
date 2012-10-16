@@ -1,0 +1,1 @@
+responsive cross browser compatible website tempalte using foundation 3 , Compass, css pie, boxsizing.htc and backstrap bg image

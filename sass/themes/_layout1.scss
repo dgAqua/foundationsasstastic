@@ -1,0 +1,96 @@
+
+.box {
+	//border: solid 1px #000;
+	margin-bottom:10px;
+	background-color: #dedede;
+}
+
+
+
+body {
+	@include outerRow();
+	@include mobileRow();
+}
+
+
+.wrapper {
+	padding: 10px;
+	display: block;
+}
+
+
+header[role=banner] {
+	@include column(12);		
+
+	}
+
+nav {
+	@include column(2);
+	@include mobileColumn(4);
+	min-height: $pageHeight;
+}
+
+
+article {
+	@include column(8);
+	@include mobileColumn(4);
+	min-height: $pageHeight;
+
+
+	
+}
+
+
+aside {
+	@include column(2);
+	@include mobileColumn(4);
+	@extend .last;
+	@extend .hide-for-small;
+	min-height: $pageHeight;
+	*behavior: url(boxsizing.htc);
+	
+
+	
+}
+
+footer {
+	@include column(12);
+	clear: both;
+}
+
+
+// ie6 fixes
+
+.lt-ie7 {
+	h1 {color: #f00;}
+	
+	.wrapper {
+	width: 1020px;
+	margin: 0px auto;
+	}
+	
+	aside {
+		float: right;
+		margin-right: 0px;
+		width: 14.6%;
+		
+		min-height: 0px;
+		height:$pageHeight; 
+		
+			
+	}
+	article {
+		float: left;
+		margin-right: 10px;
+	}
+	nav {
+		float: left;
+		margin-right: 10px;
+		
+		min-height: 0px;
+		height:$pageHeight; 
+		
+	}
+	
+}
+

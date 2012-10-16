@@ -1,0 +1,170 @@
+// You custom settings file to override Foundation defaults
+@import "settings";
+
+// Comment out this import if you are customizing you imports below
+//@import "foundation";
+
+// ----------------------------------------
+// Import specific parts of Foundation by commenting the import "foundation"
+// and uncommenting what you want below. You must uncomment the following if customizing
+
+ @import "compass/css3";
+ @import "foundation/settings";
+ @import "foundation/functions/all";
+
+// Control which mixins you have access too
+
+ @import "foundation/mixins/clearfix";
+ @import "foundation/mixins/css-triangle";
+ @import "foundation/mixins/font-size";
+
+// Must include next two for semantic grid to work
+
+ @import "foundation/mixins/respond-to";
+ @import "foundation/mixins/semantic-grid";
+
+ @import "foundation/common/globals";
+ @import "modular-scale";
+
+// Must include the grid for any responsiveness
+
+
+
+
+ @import "foundation/components/grid";
+
+// Control which common styles get compiled
+
+ @import "foundation/common/typography";
+// @import "foundation/common/forms";
+
+// Control which components you get if customizing
+
+// @import "foundation/components/modules/buttons";
+ @import "foundation/components/modules/tabs";
+ @import "foundation/components/modules/ui";
+// @import "foundation/components/modules/topbar";
+// @import "foundation/components/modules/navbar";
+ @import "foundation/components/modules/orbit";
+// @import "foundation/components/modules/reveal";
+// @import "foundation/components/modules/offcanvas";
+@import "formalize.css";
+@import "compass/css3/pie";
+@import "typography_defaults";
+
+$pageHeight:400px;
+$hexDarkShader:#cccccc;
+
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+
+
+// mixins
+
+/*
+@mixin mixRoundedCorner ($bdrRadius: 5px, $bdrColour: #999) {
+	border: $bdrRadius solid $bdrColour;
+    -webkit-border-radius: $bdrRadius;
+    -moz-border-radius: $bdrRadius;	
+    border-radius: $bdrRadius;	
+}
+
+@mixin mixShadow ($x: 0px,$y: 3px, $blur: 5px, $alpha: 0.5) {
+	-webkit-box-shadow: $x $y $blur rgba(0, 0, 0, $alpha);
+	-moz-box-shadow: $x $y $blur rgba(0, 0, 0, $alpha);
+	box-shadow: $x $y $blur rgba(0, 0, 0, $alpha);
+}
+
+@mixin mixGradientY ($hexGradY1: #000000, $hexGradY2: #ffffff) {	
+	background: $hexGradY1; /*fallback for non-CSS3 browsers*!/
+    background: -webkit-gradient(linear, 0 0, 0 100%, from($hexGradY1), to($hexGradY2)); /*old webkit - safari*!/	
+    background: -webkit-linear-gradient(top, $hexGradY1, $hexGradY2); /*new webkit*!/
+    background: -moz-linear-gradient(top, $hexGradY1, $hexGradY2); /*gecko*!/
+    background: -ms-linear-gradient(top, $hexGradY1, $hexGradY2); /*IE10*!/
+    background: -o-linear-gradient(top, $hexGradY1, $hexGradY2); /*opera 11.10+*!/
+    background: linear-gradient(top, $hexGradY1, $hexGradY2); /*future CSS3 browsers*!/
+    -pie-background: linear-gradient(top, $hexGradY1, $hexGradY2); /*PIE*!/	
+}
+
+@mixin mixGradientX ($hexGradX1: #000000, $hexGradX2: #ffffff) {	
+	background: $hexGradX1; /*fallback for non-CSS3 browsers*!/
+    background: -webkit-gradient(linear, left 0%, right 100%, from($hexGradX1), to($hexGradX2)); /*old webkit - safari*!/	
+    background: -webkit-linear-gradient(left, $hexGradX1, $hexGradX2); /*new webkit*!/
+    background: -moz-linear-gradient(left, $hexGradX1, $hexGradX2); /*gecko*!/
+    background: -ms-linear-gradient(left, $hexGradX1, $hexGradX2); /*IE10*!/
+    background: -o-linear-gradient(left, $hexGradX1, $hexGradX2); /*opera 11.10+*!/
+    background: linear-gradient(left, $hexGradX1, $hexGradX2); /*future CSS3 browsers*!/
+    -pie-background: linear-gradient(left, $hexGradX1, $hexGradX2); /*PIE*!/	
+}
+
+.box-rounded {
+	background:$hexDarkShader;
+	@include mixRoundedCorner(10px,$hexDarkShader);
+	position:relative; //to enable PIE.htc to work //
+    behavior: url(css/PIE.htc);
+}
+.box-shadow {
+	background:$hexDarkShader;
+	@include mixShadow(0px,2px,2px,0.5);
+	position:relative; //to enable PIE.htc to work //
+    behavior: url(css/PIE.htc);
+}
+
+.box-vert-gradient {
+	@include mixGradientY(#555555,$hexDarkShader);
+	position:relative; //to enable PIE.htc to work //
+    behavior: url(css/PIE.htc);
+}
+
+.box-horiz-gradient {
+	@include mixGradientX(#000000,$hexDarkShader);
+	position:relative; //to enable PIE.htc to work //
+    behavior: url(css/PIE.htc);
+}*/
+
+
+
+// ie7 fix
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; *behavior: url(../boxsizing.htc); }
+
+.clear {
+	clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+//orbit
+
+.orbit-container{
+	display: block;
+	width: 300px;
+	height: 220px;
+}
+
+
+// orbit image fixers
+div.orbit-wrapper span.rotator { background: url('../images/foundation/orbit/rotator-black.png?1349471119') no-repeat;}
+div.orbit-wrapper span.mask.move {background: url('../images/foundation/orbit/timer-black.png?1349471119') repeat 0 0;}
+div.orbit-wrapper span.pause {background: url('../images/foundation/orbit/pause-black.png?1349471119') no-repeat;}
+div.orbit-wrapper span.pause.active {background: url('../images/foundation/orbit/pause-black.png?1349471119') no-repeat 0 -40px;}
+div.orbit-wrapper div.slider-nav span.right {background: url('../images/foundation/orbit/right-arrow-small.png?1349471119');}
+div.orbit-wrapper div.slider-nav span.left {background: url('../images/foundation/orbit/left-arrow-small.png?1349471119');}
+.lt-ie9 div.orbit-wrapper div.slider-nav span.right {background: url('../images/foundation/orbit/right-arrow-small.png?1349471119');}
+.lt-ie9 div.orbit-wrapper div.slider-nav span.left { background: url('../images/foundation/orbit/left-arrow-small.png?1349471119');}
+
+
+
+
+
+
